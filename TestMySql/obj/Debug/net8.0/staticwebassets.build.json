@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "GvtemWJnaIgOr7HSB0pwmwkYWWXwPauENzQ7U1xG6IQ=",
+  "Source": "TestMySql",
+  "BasePath": "_content/TestMySql",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
