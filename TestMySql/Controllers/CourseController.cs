@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TestMySql.DTO.request;
 using TestMySql.Entities;
@@ -11,10 +12,12 @@ namespace TestMySql.Controllers
     public class CoursesController : ControllerBase
     {
         private readonly ICourseService _courseService;
+        private readonly IMapper mapper;
 
-        public CoursesController(ICourseService courseService)
+        public CoursesController(ICourseService courseService, IMapper mapper)
         {
             _courseService = courseService;
+            this.mapper = mapper;
         }
 
         [HttpGet]
@@ -22,7 +25,7 @@ namespace TestMySql.Controllers
         public async Task<ActionResult<IEnumerable<Course>>> GetCourses()
         {
             var courses = await _courseService.GetAllCoursesAsync();
-            return Ok(courses);
+            return Ok(mapper.Map<IEnumerable<Course>>(courses));
         }
 
         [HttpGet("{id}")]
@@ -34,20 +37,14 @@ namespace TestMySql.Controllers
             {
                 return NotFound();
             }
-            return Ok(course);
+            return Ok(mapper.Map<Course>(course));
         }
 
         [HttpPost]
         [Authorize(Roles = "Writer")]
         public async Task<ActionResult<Course>> PostCourse(CourseCreationRequest courseRequest)
         {
-            var course = new Course
-            {
-                CourseName = courseRequest.CourseName,
-                Description = courseRequest.CourseDescription,
-                Credits = courseRequest.Credits,
-                CreatedDate = courseRequest.CreatedDate
-            };
+            var course = mapper.Map<Course>(courseRequest);
 
             await _courseService.AddCourseAsync(course);
             return CreatedAtAction(nameof(GetCourseById), new { id = course.CourseId }, course);

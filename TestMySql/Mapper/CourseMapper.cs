@@ -1,6 +1,14 @@
-﻿namespace TestMySql.Mapper;
+﻿using AutoMapper;
+using TestMySql.DTO.request;
+using TestMySql.Entities;
 
-public class CourseMapper
+namespace TestMySql.Mapper;
+
+public class CourseMapper : Profile
 {
-    
+    public CourseMapper()
+    {
+        CreateMap<CourseCreationRequest, Course>().ReverseMap();
+        CreateMap<CourseUpdateRequest, Course>().ReverseMap();
+    }
 }

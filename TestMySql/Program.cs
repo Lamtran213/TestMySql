@@ -1,25 +1,22 @@
+using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using MySqlConnector;
 using NetCore.AutoRegisterDi;
-using System.Text;
 using TestMySql;
-using TestMySql.Entities;
 using TestMySql.Exceptions;
-using TestMySql.Repositories.Class;
-using TestMySql.Repositories.Interface;
-using TestMySql.Services.Interface;
-using Microsoft.OpenApi.Models;
+using TestMySql.Mapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+// Add Swagger configuration
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
@@ -27,12 +24,14 @@ builder.Services.AddSwaggerGen(options =>
         Title = "Student Course API",
         Version = "v1"
     });
-    options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme()
+    options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme
     {
         Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.ApiKey,
         Scheme = JwtBearerDefaults.AuthenticationScheme,
+        BearerFormat = "JWT",
+        Description = "Enter 'Bearer' [space] and then your valid token in the text input below.\n\nExample: \"Bearer abc123\""
     });
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
@@ -50,6 +49,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+// Add database connection from MySQL
 builder.Services.AddTransient<MySqlConnection>(_ =>
     new MySqlConnection(builder.Configuration.GetConnectionString("Default")));
 builder.Services.AddDbContext<StudentCourseDbContext>(options =>
@@ -66,6 +66,10 @@ builder.Services.AddDbContext<AuthDbContext>(options =>
         mySqlOptions => mySqlOptions.EnableRetryOnFailure()
     )
 );
+
+//Add AutoMapper
+builder.Services.AddAutoMapper(typeof(CourseMapper));
+
 // Add Identity
 builder.Services.AddIdentityCore<IdentityUser>()
     .AddRoles<IdentityRole>()
@@ -82,11 +86,14 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequiredUniqueChars = 1;
 });
 
+// Add auto register DI
 builder.Services.RegisterAssemblyPublicNonGenericClasses()
     .Where(c => c.Name.EndsWith("Service") || c.Name.EndsWith("Repository"))
     .AsPublicImplementedInterfaces(ServiceLifetime.Scoped);
+
+// Add JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options => 
+    .AddJwtBearer(options =>
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
@@ -111,7 +118,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
-
 app.UseAuthorization();
 
 app.MapControllers();

@@ -13,13 +13,11 @@ namespace TestMySql.Controllers
     public class AuthController : ControllerBase
     {
         private readonly UserManager<IdentityUser> _userManager;
-        //private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ITokenRepository _tokenRepository;
 
         public AuthController(UserManager<IdentityUser> userManager, ITokenRepository tokenRepository)
         {
             _userManager = userManager;
-            //_roleManager = roleManager;
             _tokenRepository = tokenRepository;
         }
 
