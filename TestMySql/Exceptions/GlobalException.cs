@@ -32,6 +32,7 @@
                 throw new GlobalException(ErrorType.InternalServerError, message);
             }
         }
+        // public static void ThrowIfInsertError
 
         public enum ErrorType
         {

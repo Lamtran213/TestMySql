@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "TestMySql.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "TestMySql.DTO.request.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestMySql.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerRequest",
+        "Type": "TestMySql.DTO.request.RegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TestMySql.Controllers.CoursesController",
     "Method": "GetCourses",
     "RelativePath": "api/Courses",
@@ -28,8 +60,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "course",
-        "Type": "TestMySql.Entities.Course",
+        "Name": "courseRequest",
+        "Type": "TestMySql.DTO.request.CourseCreationRequest",
         "IsRequired": true
       }
     ],
@@ -107,6 +139,88 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TestMySql.Controllers.CoursesController",
+    "Method": "FilteringByCourseId",
+    "RelativePath": "api/Courses/filtering",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "courseIdStart",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "courseIdEnd",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TestMySql.Entities.Course, TestMySql, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TestMySql.Controllers.CoursesController",
+    "Method": "Pagination",
+    "RelativePath": "api/Courses/pagination",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TestMySql.Entities.Course, TestMySql, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TestMySql.Controllers.CoursesController",
+    "Method": "SortingByCourseName",
+    "RelativePath": "api/Courses/sorting",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[TestMySql.Entities.Course, TestMySql, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "TestMySql.Controllers.EnrollmentsController",

@@ -43,5 +43,17 @@ namespace TestMySql.Repositories.Class
             _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
+        public async Task<IEnumerable<Course>> SortingByCourseNameAsync()
+        {
+            return await _context.Courses.OrderByDescending(c => c.CourseName).ToListAsync();
+        }
+        public async Task<IEnumerable<Course>> PaginationAsync(int pageNumber, int pageSize)
+        {
+            return await _context.Courses.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
+        }
+        public async Task<IEnumerable<Course>> FilteringByCourseIdAsync(int courseId, int courseIdEnd)
+        {
+            return await _context.Courses.Where(c => c.CourseId >= courseId && c.CourseId <= courseIdEnd).ToListAsync();
+        }
     }
 }

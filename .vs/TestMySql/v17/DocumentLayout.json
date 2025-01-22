@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|c:\\users\\admin lam\\onedrive\\documents\\visual studio 2022\\testmysql\\testmysql\\services\\class\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|solutionrelative:testmysql\\services\\class\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|c:\\users\\admin lam\\onedrive\\documents\\visual studio 2022\\testmysql\\testmysql\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|solutionrelative:testmysql\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|c:\\users\\admin lam\\onedrive\\documents\\visual studio 2022\\testmysql\\testmysql\\exceptions\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|solutionrelative:testmysql\\exceptions\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|c:\\users\\admin lam\\onedrive\\documents\\visual studio 2022\\testmysql\\testmysql\\dto\\response\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|solutionrelative:testmysql\\dto\\response\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|c:\\users\\admin lam\\onedrive\\documents\\visual studio 2022\\testmysql\\testmysql\\repositories\\interface\\itokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|solutionrelative:testmysql\\repositories\\interface\\itokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|c:\\users\\admin lam\\onedrive\\documents\\visual studio 2022\\testmysql\\testmysql\\dto\\request\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|solutionrelative:testmysql\\dto\\request\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|c:\\users\\admin lam\\onedrive\\documents\\visual studio 2022\\testmysql\\testmysql\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|solutionrelative:testmysql\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|c:\\users\\admin lam\\onedrive\\documents\\visual studio 2022\\testmysql\\testmysql\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F82D9F2-0C0B-42FB-929E-71CD14F3497E}|TestMySql\\TestMySql.csproj|solutionrelative:testmysql\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,29 +46,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CourseService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\Services\\Class\\CourseService.cs",
-              "RelativeDocumentMoniker": "TestMySql\\Services\\Class\\CourseService.cs",
-              "ToolTip": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\Services\\Class\\CourseService.cs",
-              "RelativeToolTip": "TestMySql\\Services\\Class\\CourseService.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAA5wA0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\DTO\\response\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "TestMySql\\DTO\\response\\LoginResponse.cs",
+              "ToolTip": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\DTO\\response\\LoginResponse.cs",
+              "RelativeToolTip": "TestMySql\\DTO\\response\\LoginResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T16:06:17.637Z",
+              "WhenOpened": "2025-01-22T03:58:09.067Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ExceptionMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\Exceptions\\ExceptionMiddleware.cs",
-              "RelativeDocumentMoniker": "TestMySql\\Exceptions\\ExceptionMiddleware.cs",
-              "ToolTip": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\Exceptions\\ExceptionMiddleware.cs",
-              "RelativeToolTip": "TestMySql\\Exceptions\\ExceptionMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ITokenRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\Repositories\\Interface\\ITokenRepository.cs",
+              "RelativeDocumentMoniker": "TestMySql\\Repositories\\Interface\\ITokenRepository.cs",
+              "ToolTip": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\Repositories\\Interface\\ITokenRepository.cs",
+              "RelativeToolTip": "TestMySql\\Repositories\\Interface\\ITokenRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T16:03:42.224Z",
+              "WhenOpened": "2025-01-22T03:38:35.44Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\DTO\\request\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "TestMySql\\DTO\\request\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\DTO\\request\\LoginRequest.cs",
+              "RelativeToolTip": "TestMySql\\DTO\\request\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T03:20:30.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "TestMySql\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "TestMySql\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAgwFcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T01:29:13.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\Program.cs",
+              "RelativeDocumentMoniker": "TestMySql\\Program.cs",
+              "ToolTip": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\Program.cs",
+              "RelativeToolTip": "TestMySql\\Program.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAqwDEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T01:21:02.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\AuthDbContext.cs",
+              "RelativeDocumentMoniker": "TestMySql\\AuthDbContext.cs",
+              "ToolTip": "C:\\Users\\ADMIN LAM\\OneDrive\\Documents\\Visual Studio 2022\\TestMySql\\TestMySql\\AuthDbContext.cs",
+              "RelativeToolTip": "TestMySql\\AuthDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T01:08:38.877Z"
             }
           ]
         }

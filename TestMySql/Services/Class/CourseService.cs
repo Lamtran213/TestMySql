@@ -41,4 +41,22 @@ public class CourseService : ICourseService
         GlobalException.ThrowIfNotFound(course, $"Course with ID {id} not found.");
         await _courseRepository.DeleteAsync(id);
     }
+    public async Task<IEnumerable<Course>> SortingByCourseNameAsync()
+    {
+        var courses = await _courseRepository.SortingByCourseNameAsync();
+        GlobalException.ThrowIfNull(courses, "No courses found.");
+        return courses;
+    }
+    public async Task<IEnumerable<Course>> PaginationAsync(int pageNumber, int pageSize)
+    {
+        var courses = await _courseRepository.PaginationAsync(pageNumber, pageSize);
+        GlobalException.ThrowIfNull(courses, "No courses found.");
+        return courses;
+    }
+    public async Task<IEnumerable<Course>> FilteringByCourseIdAsync(int courseIdStart, int courseIdEnd)
+    {
+        var courses = await _courseRepository.FilteringByCourseIdAsync(courseIdStart, courseIdEnd);
+        GlobalException.ThrowIfNull(courses, "No courses found.");
+        return courses;
+    }
 }
